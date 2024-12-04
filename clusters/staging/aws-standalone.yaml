@@ -1,0 +1,17 @@
+apiVersion: hmc.mirantis.com/v1alpha1
+kind: ManagedCluster
+metadata:
+  name: managed-standalone-cluster-2
+  namespace: hmc-system
+spec:
+  template: aws-standalone-cp-0-0-3
+  credential: aws-credential
+  dryRun: true # replace with false to bootstrap aws objects
+  config:
+    region: us-east-1
+    controlPlaneNumber: 3
+    controlPlane:
+      instanceType: t3.small
+    workersNumber: 5
+    worker:
+      instanceType: t3.small

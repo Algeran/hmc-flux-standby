@@ -1,0 +1,12 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: providers
+  namespace: hmc-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/Algeran/hmc-flux-standby.git
+
