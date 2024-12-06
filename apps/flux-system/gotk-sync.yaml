@@ -3,7 +3,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: flux-system
+  name: hmc
   namespace: flux-system
 spec:
   interval: 1m0s
@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./management/staging
+  path: non-existent
   prune: true
   sourceRef:
     kind: GitRepository
