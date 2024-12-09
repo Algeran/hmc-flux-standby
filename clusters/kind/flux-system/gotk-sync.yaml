@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: https://github.com/Algeran/hmc-flux-standby.git
+  url: ssh://git@github.com/soerenschneider/hmc-flux-standby
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./management/staging
+  path: ./clusters/kind
   prune: true
   sourceRef:
     kind: GitRepository

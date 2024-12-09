@@ -1,12 +1,12 @@
 apiVersion: hmc.mirantis.com/v1alpha1
 kind: ManagedCluster
 metadata:
-  name: managed-standalone-cluster-2
+  name: managed-standalone-cluster
   namespace: hmc-system
 spec:
   template: aws-standalone-cp-0-0-3
   credential: aws-credential
-  dryRun: true # replace with false to bootstrap aws objects
+  dryRun: true
   config:
     region: us-east-1
     controlPlaneNumber: 3
