@@ -1,0 +1,8 @@
+nameSuffix: -yivchenkov
+resources:
+  - managed-builtin-standalone-azure.yaml
+patches:
+  - target:
+      name: managed-builtin-standalone-azure
+      kind: ManagedCluster
+    path: patches/builtin-standaline-0.0.4.yaml

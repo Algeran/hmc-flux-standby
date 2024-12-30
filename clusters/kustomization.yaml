@@ -1,5 +1,6 @@
 resources:
   - aws
+  - azure
 patches:
   - target:
       kind: ManagedCluster
