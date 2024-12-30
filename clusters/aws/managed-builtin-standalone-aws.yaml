@@ -1,0 +1,17 @@
+---
+apiVersion: hmc.mirantis.com/v1alpha1
+kind: ManagedCluster
+metadata:
+  name: managed-builtin-standalone-aws
+  namespace: hmc-system
+spec:
+  credential: aws-credential
+  dryRun: false
+  config:
+    region: us-west-2
+    controlPlaneNumber: 1
+    workersNumber: 2
+    controlPlane:
+      instanceType: t3.small
+    worker:
+      instanceType: t3.small
