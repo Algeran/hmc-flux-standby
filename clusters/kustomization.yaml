@@ -1,3 +1,7 @@
 resources:
   - aws
-patches: []
+patches:
+  - target:
+      kind: ManagedCluster
+      labelSelector: hmc-service/ingress=nginx-4-11-0
+    path: services/ingress/nginx-4-11-0.yaml

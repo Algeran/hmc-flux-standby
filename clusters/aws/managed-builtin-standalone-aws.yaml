@@ -4,6 +4,8 @@ kind: ManagedCluster
 metadata:
   name: managed-builtin-standalone-aws
   namespace: hmc-system
+  labels:
+    hmc-service/ingress: nginx-4-11-0
 spec:
   credential: aws-credential
   dryRun: false
