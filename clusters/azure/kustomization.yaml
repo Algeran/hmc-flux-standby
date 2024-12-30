@@ -5,4 +5,4 @@ patches:
   - target:
       name: managed-builtin-standalone-azure
       kind: ManagedCluster
-    path: patches/builtin-standaline-0.0.4.yaml
+    path: patches/builtin-standalone-0.0.4.yaml
